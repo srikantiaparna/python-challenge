@@ -68,15 +68,15 @@ print ("\n--------------------------")
 # Exports results into text file
 
 output_file = os.path.join("election_data_output.csv")
-dashbreak = "-------------------------"
+dashline = "-------------------------"
 
 with open(output_file,'w') as text:
     text.write ("Election Results\n")
-    text.write(dashbreak + "\n")
+    text.write(dashline + "\n")
     text.write(f"Total Votes: {total_votes}" + "\n")
-    text.write(dashbreak + "\n")
+    text.write(dashline + "\n")
     for person, vote_count in candidate_votes.items():
         text.write(f"{person}: {votes_percentage[person]} ({vote_count})" + "\n")
-    text.write(dashbreak + "\n")
+    text.write(dashline + "\n")
     text.write(f"Winner: {winner}" + "\n")
-    text.write(dashbreak + "\n")
+    text.write(dashline + "\n")
